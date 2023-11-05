@@ -1,9 +1,24 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/G logo.jpg'
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
 
 
 
 const Navbar = () => {
+    const {user, userLogOut} = useContext(AuthContext)
+
+    const handleLogout = () =>{
+        userLogOut()
+        .then(result =>{
+            console.log(result.user);
+            alert('logout')
+        })
+        .catch(err =>{
+            console.log(err);
+        })
+    }
+
      const links = <>
      <button><NavLink to="/">Home</NavLink></button>
      <button><NavLink to="/services" >Services</NavLink></button>
@@ -26,8 +41,20 @@ const Navbar = () => {
 				{links}
 			</button>
 		</div>
-		<div className="items-center  flex-shrink-0 hidden lg:flex">
-			<Link to='/login'><button className="px-8 py-3 font-semibold bg-[#4A55A2] rounded dark:bg-violet-400 dark:text-gray-900">Log in</button></Link>
+		<div className="gap-4  flex-shrink-0 hidden lg:flex">
+            <div className='flex justify-center flex-col items-center'>
+            {
+                user && <img className='w-16 h-16 rounded-full' src={user.photoURL
+                }/>
+            }
+            {
+                user && <p>{user.displayName
+                }</p>
+            }
+            
+            </div>
+			{ user?  <button className="px-8 py-3 font-semibold bg-[#4A55A2] rounded dark:bg-violet-400 dark:text-gray-900" onClick={handleLogout}>LogOut</button> : <Link to='/login'><button className="px-8 py-3 font-semibold bg-[#4A55A2] rounded dark:bg-violet-400 dark:text-gray-900">Log in</button></Link> 
+           }
 		</div>
 	</div>
 </header>
