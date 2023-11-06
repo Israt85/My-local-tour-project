@@ -13,6 +13,7 @@ import Login from './Pages/Login';
 import Register from './Pages/Register';
 import AuthProvider from './Provider/AuthProvider';
 import AllService from './Pages/AllService';
+import SingleService from './Components/SingleService';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
       {
          path : '/service',
          element: <AllService></AllService>
+      },
+      {
+        path: '/details/:id',
+        element: <SingleService></SingleService>,
+        loader: ({params}) =>{return fetch(`http://localhost:5000/service/${params.id}`)}
       },
       {
         path: "/dashboard",

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const AllServe = ({allserve}) => {
-    const {service_price, service_provider_name, service_name , service_description, service_area, service_image, service_provider_image} = allserve
+    const {service_price, _id, service_provider_name, service_name , service_description, service_area, service_image, service_provider_image} = allserve
 
     return (
         <div>
@@ -26,7 +26,7 @@ const AllServe = ({allserve}) => {
                 {service_area}
             </p>
             <div className="mt-2">
-            <Link ><button className="btn bg-indigo-500">View Details</button></Link>
+            <Link to={`/details/${_id}`} ><button className="btn bg-indigo-500">View Details</button></Link>
             </div>
             </div>
         </div>
