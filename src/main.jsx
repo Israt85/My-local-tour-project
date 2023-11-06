@@ -14,6 +14,7 @@ import Register from './Pages/Register';
 import AuthProvider from './Provider/AuthProvider';
 import AllService from './Pages/AllService';
 import SingleService from './Components/SingleService';
+import AddService from './Pages/AddService';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: 'register',
         element: <Register></Register>
+      },
+      {
+        path : '/addservice',
+        element: <AddService></AddService>
       }
     ]
   },
