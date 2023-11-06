@@ -1,12 +1,16 @@
+import { Link } from "react-router-dom";
 
+const AllServe = ({allserve}) => {
+    const {service_price, service_provider_name, service_name , service_description, service_area, service_image, service_provider_image} = allserve
 
-const Service = ({service}) => {
-    const {service_price, service_provider_name, service_name , service_description, service_image, service_provider_image} = service
     return (
         <div>
-            <div className=" p-6 h-full rounded-md shadow-md bg-[#8E8FFA] text-gray-50">
+            <div className=" border p-6 rounded-md shadow-md bg-[#8E8FFA] text-gray-50">
                 <img src={service_image} alt="" className="object-cover object-center w-full rounded-md h-72 bg-gray-500" />
-                <span className="block mt-4 text-xs font-medium tracki uppercase text-[#190482]">{service_name}</span>
+               <div className="flex justify-between items-center"> <span className="block mt-4 text-xs font-medium tracki uppercase text-[#190482]">{service_name}</span>
+                <p className="text-xl font-extrabold text-blue-600">
+                {service_area}
+            </p></div>
                 <div className="flex items-center gap-2 mt-6 mb-2">
                     <div><img className="w-10 h-10 rounded-full" src={service_provider_image} alt="" /></div>
                     
@@ -18,13 +22,15 @@ const Service = ({service}) => {
                 <p className="text-xl font-bold text-[#190482]">
                 price : ${service_price}
             </p>
+            <p>
+                {service_area}
+            </p>
             <div className="mt-2">
-            <button className="btn bg-indigo-500">View Details</button>
+            <Link ><button className="btn bg-indigo-500">View Details</button></Link>
             </div>
             </div>
-            
         </div>
     );
 };
 
-export default Service;
+export default AllServe;

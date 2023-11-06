@@ -12,6 +12,7 @@ const Home = () => {
            <Destination></Destination>
            <Testimonials></Testimonials>
            <Blogs></Blogs>
+           
         </div>
     );
 };

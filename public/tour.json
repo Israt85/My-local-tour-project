@@ -5,7 +5,8 @@
     "service_image": "https://i.ibb.co/hHPSpbh/foodtour.jpg",
     "service_provider_image": "https://i.ibb.co/FqLCtF4/albert-dera-ILip77-Sbm-OE-unsplash.jpg",
     "service_provider_name": "Jane Smith",
-    "service_price": 75
+    "service_price": 75,
+    "service_area": "Kensington and Chelsea"
   },
   {
     "service_name": "Outdoor Photography Workshop",
@@ -13,7 +14,8 @@
     "service_image": "https://i.ibb.co/z4VmtfS/jamie-street-q-WYv-QMIJyf-E-unsplash.jpg",
     "service_provider_image": "https://i.ibb.co/nsb4GcS/joseph-gonzalez-i-Fg-Rcq-Hznqg-unsplash.jpg",
     "service_provider_name": "John Doe",
-    "service_price": 100
+    "service_price": 100,
+    "service_area": "Lambeth"
   },
   {
     "service_name": "Personal Fitness Training",
@@ -21,7 +23,8 @@
     "service_image": "https://i.ibb.co/VYqhhfX/victor-freitas-vq-DAUejnw-Kw-unsplash.jpg",
     "service_provider_image": "https://i.ibb.co/L0m5m9B/lethicia-matos-CSh-h-NHc3-Y8-unsplash.jpg",
     "service_provider_name": "Sarah Johnson",
-    "service_price": 50
+    "service_price": 50,
+    "service_area": "Bexley"
   },
   {
     "service_name": "Local Artisan Workshop",
@@ -29,7 +32,8 @@
     "service_image": "https://i.ibb.co/302VjMy/carter-yocham-tn-YWFvk-fr-U-unsplash.jpg",
     "service_provider_image": "https://i.ibb.co/YRDvhtX/linkedin-sales-solutions-p-At-A8xe-i-VM-unsplash.jpg",
     "service_provider_name": "Michael Brown",
-    "service_price": 60
+    "service_price": 60,
+    "service_area": "Brent"
   },
   {
     "service_name": "Guided Nature Hike",
@@ -37,7 +41,8 @@
     "service_image": "https://i.ibb.co/LngkL06/holly-mandarich-UVy-Of-X3v0-Ls-unsplash.jpg",
     "service_provider_image": "https://i.ibb.co/Swtz8fJ/microsoft-365-7m-Bict-B-urk-unsplash.jpg",
     "service_provider_name": "Emily Turner",
-    "service_price": 40
+    "service_price": 40,
+    "service_area":"London"
   }
 ]
 
