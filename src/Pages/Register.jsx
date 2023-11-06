@@ -20,7 +20,6 @@ const Register = () => {
         userSignup(email,password)
         .then(result =>{
             console.log(result.user);
-            form.reset()
             userProfile(name, photo)
             .then(result =>{
                 console.log(result.user);

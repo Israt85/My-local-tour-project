@@ -1,0 +1,48 @@
+[
+    {
+      "Service Name": "Local Food Tour",
+      "Service Description": "Explore the local culinary scene with a guided food tour. Sample delicious dishes and learn about the city's food culture.",
+      "View Detail Button": "View Details",
+      "Service Image": "https://i.ibb.co/hHPSpbh/foodtour.jpg",
+      "Service Provider Image": "https://i.ibb.co/FqLCtF4/albert-dera-ILip77-Sbm-OE-unsplash.jpg",
+      "Service Provider Name": "Jane Smith",
+      "Service Price": 75
+    },
+    {
+      "Service Name": "Outdoor Photography Workshop",
+      "Service Description": "Enhance your photography skills in the great outdoors. Learn from a local photographer and capture stunning landscapes.",
+      "View Detail Button": "View Details",
+      "Service Image": "https://i.ibb.co/z4VmtfS/jamie-street-q-WYv-QMIJyf-E-unsplash.jpg",
+      "Service Provider Image": "https://i.ibb.co/nsb4GcS/joseph-gonzalez-i-Fg-Rcq-Hznqg-unsplash.jpg",
+      "Service Provider Name": "John Doe",
+      "Service Price": 100
+    },
+    {
+      "Service Name": "Personal Fitness Training",
+      "Service Description": "Achieve your fitness goals with a personal trainer. Get customized workout plans and expert guidance.",
+      "View Detail Button": "View Details",
+      "Service Image": "https://i.ibb.co/VYqhhfX/victor-freitas-vq-DAUejnw-Kw-unsplash.jpg",
+      "Service Provider Image": "https://i.ibb.co/L0m5m9B/lethicia-matos-CSh-h-NHc3-Y8-unsplash.jpg",
+      "Service Provider Name": "Sarah Johnson",
+      "Service Price": 50
+    },
+    {
+      "Service Name": "Local Artisan Workshop",
+      "Service Description": "Unleash your creativity in a pottery workshop. Create unique clay masterpieces with the guidance of a local artisan.",
+      "View Detail Button": "View Details",
+      "Service Image": "https://i.ibb.co/302VjMy/carter-yocham-tn-YWFvk-fr-U-unsplash.jpg",
+      "Service Provider Image": "https://i.ibb.co/YRDvhtX/linkedin-sales-solutions-p-At-A8xe-i-VM-unsplash.jpg",
+      "Service Provider Name": "Michael Brown",
+      "Service Price": 60
+    },
+    {
+      "Service Name": "Guided Nature Hike",
+      "Service Description": "Embark on a scenic nature hike with a knowledgeable guide. Discover the local flora, fauna, and breathtaking views.",
+      "View Detail Button": "View Details",
+      "Service Image": "https://i.ibb.co/LngkL06/holly-mandarich-UVy-Of-X3v0-Ls-unsplash.jpg",
+      "Service Provider Image": "https://i.ibb.co/Swtz8fJ/microsoft-365-7m-Bict-B-urk-unsplash.jpg",
+      "Service Provider Name": "Emily Turner",
+      "Service Price": 40
+    }
+  ]
+  

@@ -44,11 +44,11 @@ const Navbar = () => {
 		<div className="gap-4  flex-shrink-0 hidden lg:flex">
             <div className='flex justify-center flex-col items-center'>
             {
-                user && <img className='w-16 h-16 rounded-full' src={user.photoURL
+                user && <img className='w-16 h-16 rounded-full' src={user?.photoURL
                 }/>
             }
             {
-                user && <p>{user.displayName
+                user && <p>{user?.displayName
                 }</p>
             }
             

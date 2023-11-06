@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 
 const auth = getAuth(app);
 const AuthProvider = ({children}) => {
-    const [user,setUser] = useState(null)
+    const [user,setUser] = useState()
     const [loading, setLoading] = useState(false)
 
     
@@ -21,25 +21,25 @@ const AuthProvider = ({children}) => {
 
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, currentUser =>{
-            console.log(currentUser);
-            setUser(currentUser)
-            setLoading(false)
+          console.log(currentUser);
+          setUser(currentUser)
+          setLoading(false)
         })
         return ()=> unsubscribe()
-    },[])
-    const userProfile = (name, photo) =>{
-        return updateProfile(auth.currentUser,{
-            displayName: name,
-            photoURL: photo
-        })
-    }
+      },[])
+   
 
     const userLogOut = ()=>{
         setLoading(true)
         return signOut(auth)
     }
-
-
+    const userProfile = (name, photo) =>{
+        setLoading(true)
+        return updateProfile(auth.currentUser,{
+            displayName: name,
+            photoURL: photo
+        })
+    }
     
     const authInfo ={
        user,
