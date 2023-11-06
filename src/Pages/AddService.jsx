@@ -1,40 +1,61 @@
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
+
 const AddService = () => {
+
+     const {user} = useContext(AuthContext)
+
+    const handleAddService = e =>{
+        e.preventDefault();
+        const form = e.target;
+        const photo = form.photo.value
+        const service = form.service.value
+        const description= form.description.value
+        const price = form.price.value
+        const address= form.address.value
+        const obj ={
+            photo,service,description,price,address
+        }  
+        console.log(obj);      
+
+    }
     return (
         <div>
             <section className="p-6 bg-gray-800  text-gray-50">
                
-	<form  className=" my-10 mx-auto">
+	<form onSubmit={handleAddService} className=" my-10 mx-auto">
     
 		<fieldset className=" gap-6 h-[600px] py-10 px-6 rounded-md shadow-sm  bg-gradient-to-r from-indigo-200 to-sky-500">
         <h2 className="text-2xl text-center">Add Services Here</h2>
 			<div className="grid grid-cols-2 gap-10 py-10">
 				<div className=" ">
 					<label  className="text-sm">photo URL</label>
-					<input  type="text" placeholder="photo url..." className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
+					<input  type="text" name="photo" placeholder="photo url..." className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
 				</div>
 				<div className=" ">
 					<label  className="text-sm">Service name</label>
-					<input  type="text" placeholder="Service name" className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
+					<input  type="text" name="service" placeholder="Service name" className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
 				</div>
 				<div className=" ">
 					<label  className="text-sm">Your Name</label>
-					<input  type="text" placeholder="name" className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
+					<input  type="text"  defaultValue={user?.displayName
+} className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
 				</div>
 				<div className=" ">
 					<label  className="text-sm">Your Email</label>
-					<input id="email" type="email" placeholder="Email" className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
+					<input id="email" type="email" defaultValue={user?.email}className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
 				</div>
 				<div className="">
 					<label className="text-sm">Address</label>
-					<input type="text" placeholder="Area" className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
+					<input type="text" name="address" placeholder="Area" className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
 				</div>
 				<div className=" ">
 					<label  className="text-sm">Price</label>
-					<input id="city" type="text" placeholder="$$" className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
+					<input id="city" type="text" name="price" placeholder="$$" className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
 				</div>
 				<div className="col-span-2">
 					<label  className="text-sm">Description</label>
-					<input type="text" placeholder="Give the description" className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
+					<input type="text" name="description" placeholder="Give the description" className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
 				</div>
 				
 			</div>
