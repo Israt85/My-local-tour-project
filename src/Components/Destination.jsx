@@ -8,7 +8,7 @@ const Destination = () => {
     return (
         <div className="py-10">
             <h2 className="text-3xl py-2 border-b-2 border-blue-950 mx-96 text-center text-[#190482] font-bold ">Top <span className="text-sky-700">Destination</span></h2>
-            <p className="w-2/3 text-center mx-auto">Are you ready to embark on your next extraordinary adventure? Look no further! We're delighted to present a selection of our top-rated destinations. Our private tours are crafted with a touch of genuine local essence, allowing you to immerse yourself in the culture, history, and traditions of each place. </p>
+            <p className="w-2/3 text-center mx-auto mb-4">Are you ready to embark on your next extraordinary adventure? Look no further! We're delighted to present a selection of our top-rated destinations. Our private tours are crafted with a touch of genuine local essence, allowing you to immerse yourself in the culture, history, and traditions of each place. </p>
 
 
             <div className='grid grid-cols-4 px-10'>
