@@ -1,48 +1,44 @@
 [
-    {
-      "Service Name": "Local Food Tour",
-      "Service Description": "Explore the local culinary scene with a guided food tour. Sample delicious dishes and learn about the city's food culture.",
-      "View Detail Button": "View Details",
-      "Service Image": "https://i.ibb.co/hHPSpbh/foodtour.jpg",
-      "Service Provider Image": "https://i.ibb.co/FqLCtF4/albert-dera-ILip77-Sbm-OE-unsplash.jpg",
-      "Service Provider Name": "Jane Smith",
-      "Service Price": 75
-    },
-    {
-      "Service Name": "Outdoor Photography Workshop",
-      "Service Description": "Enhance your photography skills in the great outdoors. Learn from a local photographer and capture stunning landscapes.",
-      "View Detail Button": "View Details",
-      "Service Image": "https://i.ibb.co/z4VmtfS/jamie-street-q-WYv-QMIJyf-E-unsplash.jpg",
-      "Service Provider Image": "https://i.ibb.co/nsb4GcS/joseph-gonzalez-i-Fg-Rcq-Hznqg-unsplash.jpg",
-      "Service Provider Name": "John Doe",
-      "Service Price": 100
-    },
-    {
-      "Service Name": "Personal Fitness Training",
-      "Service Description": "Achieve your fitness goals with a personal trainer. Get customized workout plans and expert guidance.",
-      "View Detail Button": "View Details",
-      "Service Image": "https://i.ibb.co/VYqhhfX/victor-freitas-vq-DAUejnw-Kw-unsplash.jpg",
-      "Service Provider Image": "https://i.ibb.co/L0m5m9B/lethicia-matos-CSh-h-NHc3-Y8-unsplash.jpg",
-      "Service Provider Name": "Sarah Johnson",
-      "Service Price": 50
-    },
-    {
-      "Service Name": "Local Artisan Workshop",
-      "Service Description": "Unleash your creativity in a pottery workshop. Create unique clay masterpieces with the guidance of a local artisan.",
-      "View Detail Button": "View Details",
-      "Service Image": "https://i.ibb.co/302VjMy/carter-yocham-tn-YWFvk-fr-U-unsplash.jpg",
-      "Service Provider Image": "https://i.ibb.co/YRDvhtX/linkedin-sales-solutions-p-At-A8xe-i-VM-unsplash.jpg",
-      "Service Provider Name": "Michael Brown",
-      "Service Price": 60
-    },
-    {
-      "Service Name": "Guided Nature Hike",
-      "Service Description": "Embark on a scenic nature hike with a knowledgeable guide. Discover the local flora, fauna, and breathtaking views.",
-      "View Detail Button": "View Details",
-      "Service Image": "https://i.ibb.co/LngkL06/holly-mandarich-UVy-Of-X3v0-Ls-unsplash.jpg",
-      "Service Provider Image": "https://i.ibb.co/Swtz8fJ/microsoft-365-7m-Bict-B-urk-unsplash.jpg",
-      "Service Provider Name": "Emily Turner",
-      "Service Price": 40
-    }
-  ]
+  {
+    "service_name": "Local Food Tour",
+    "service_description": "The Local Food Tour is an extraordinary culinary adventure that invites you to immerse yourself in the heart and soul of the local food culture. This guided food tour is designed to take you on a sensory journey through the city's vibrant culinary scene. It's not just about eating; it's about experiencing the very essence of the destination through its gastronomy.During this tour, you'll have the opportunity to savor a wide array of mouthwatering dishes, each representing a unique facet of the local food culture.",
+    "service_image": "https://i.ibb.co/hHPSpbh/foodtour.jpg",
+    "service_provider_image": "https://i.ibb.co/FqLCtF4/albert-dera-ILip77-Sbm-OE-unsplash.jpg",
+    "service_provider_name": "Jane Smith",
+    "service_price": 75
+  },
+  {
+    "service_name": "Outdoor Photography Workshop",
+    "service_description": "The Outdoor Photography Workshop is a captivating and educational experience that allows you to enhance your photography skills while immersing yourself in the breathtaking beauty of the great outdoors. This workshop is designed for photography enthusiasts of all levels, from beginners looking to grasp the fundamentals to experienced photographers eager to refine their artistry.Your guide, John Doe, is a highly skilled and passionate photographer with a deep appreciation for the natural world. He will lead you on a photographic journey through the stunning landscapes and sceneries that the outdoors has to offer.",
+    "service_image": "https://i.ibb.co/z4VmtfS/jamie-street-q-WYv-QMIJyf-E-unsplash.jpg",
+    "service_provider_image": "https://i.ibb.co/nsb4GcS/joseph-gonzalez-i-Fg-Rcq-Hznqg-unsplash.jpg",
+    "service_provider_name": "John Doe",
+    "service_price": 100
+  },
+  {
+    "service_name": "Personal Fitness Training",
+    "service_description": "With Personal Fitness Training, you'll work with a dedicated and knowledgeable personal trainer, Sarah Johnson. Sarah is a certified fitness expert with years of experience, and she is committed to helping you achieve your desired fitness outcomes.Based on this evaluation, Sarah will create a personalized workout plan that addresses your specific needs.",
+    "service_image": "https://i.ibb.co/VYqhhfX/victor-freitas-vq-DAUejnw-Kw-unsplash.jpg",
+    "service_provider_image": "https://i.ibb.co/L0m5m9B/lethicia-matos-CSh-h-NHc3-Y8-unsplash.jpg",
+    "service_provider_name": "Sarah Johnson",
+    "service_price": 50
+  },
+  {
+    "service_name": "Local Artisan Workshop",
+    "service_description": "The Local Artisan Workshop offers a unique and hands-on experience where participants can unleash their creativity and artistic potential. Led by the talented local artisan, Michael Brown, this workshop is perfect for individuals who want to explore the world of pottery and create one-of-a-kind clay masterpieces. The workshop takes place in a welcoming and inspiring studio setting, where you'll have access to all the necessary materials, tools, and guidance to craft your own unique pottery pieces. Michael Brown, known for his craftsmanship and artistic expertise, will be your mentor throughout the creative process.",
+    "service_image": "https://i.ibb.co/302VjMy/carter-yocham-tn-YWFvk-fr-U-unsplash.jpg",
+    "service_provider_image": "https://i.ibb.co/YRDvhtX/linkedin-sales-solutions-p-At-A8xe-i-VM-unsplash.jpg",
+    "service_provider_name": "Michael Brown",
+    "service_price": 60
+  },
+  {
+    "service_name": "Guided Nature Hike",
+    "service_description": "The Guided Nature Hike is a thrilling and educational adventure designed for nature enthusiasts and explorers of all levels of experience. Led by the knowledgeable guide, Emily Turner, this nature hike takes you on a captivating journey through the natural beauty and wonders of the local landscape.Emily Turner, your dedicated guide, is a passionate naturalist who possesses a deep understanding of the region's ecology and wildlife. Throughout the hike, Emily will share her expertise, pointing out native plants, identifying various bird species, and highlighting the diverse ecosystem you encounter along the way.",
+    "service_image": "https://i.ibb.co/LngkL06/holly-mandarich-UVy-Of-X3v0-Ls-unsplash.jpg",
+    "service_provider_image": "https://i.ibb.co/Swtz8fJ/microsoft-365-7m-Bict-B-urk-unsplash.jpg",
+    "service_provider_name": "Emily Turner",
+    "service_price": 40
+  }
+]
+
   
