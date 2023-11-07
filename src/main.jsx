@@ -16,12 +16,16 @@ import AllService from './Pages/AllService';
 import SingleService from './Components/SingleService';
 import AddService from './Pages/AddService';
 import MyService from './Pages/MyService';
+import ErrorPage from './Pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
+        
+  
       {
         path: '/',
         element: <Home></Home>

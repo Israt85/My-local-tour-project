@@ -18,7 +18,7 @@ const AddService = () => {
 		const email = form.email.defaultValue
 		const img = user?.photoURL
         const obj ={
-			service_price: price, service_provider_name: name, service_name:service , service_description: description, service_area: address, service_image:photo, service_provider_image: img
+			service_price: price, service_provider_name: name, service_name:service , service_description: description, service_area: address, service_image:photo, service_provider_image: img,email
         }  
         console.log(obj);  
 		axios.post('http://localhost:5000/service', obj) 
