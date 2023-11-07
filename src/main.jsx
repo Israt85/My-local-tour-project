@@ -17,6 +17,7 @@ import SingleService from './Components/SingleService';
 import AddService from './Pages/AddService';
 import MyService from './Pages/MyService';
 import ErrorPage from './Pages/ErrorPage';
+import Update from './Pages/Update';
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: '/myservice',
         element:<MyService></MyService>
+      },
+      {
+        path: '/update/:id',
+        element: <Update></Update>
       }
     ]
   },
