@@ -17,14 +17,12 @@ const AllServe = ({allserve}) => {
                     <h2 className="text-xl font-semibold tracki">{service_provider_name}</h2>
                 </div>
                 {
-                    service_description.length >100? <p>{service_description.slice(0,100)}</p> : <p>{service_description}</p>
+                    service_description?.length >100? <p>{service_description.slice(0,100)}</p> : <p>{service_description}</p>
                 }
                 <p className="text-xl font-bold text-[#190482]">
                 price : ${service_price}
             </p>
-            <p>
-                {service_area}
-            </p>
+           
             <div className="mt-2">
             <Link to={`/details/${_id}`} ><button className="btn bg-indigo-500">View Details</button></Link>
             </div>

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import axios from "axios";
 
 const AddService = () => {
 
@@ -13,10 +14,17 @@ const AddService = () => {
         const description= form.description.value
         const price = form.price.value
         const address= form.address.value
+		const name = form.name.defaultValue;
+		const email = form.email.defaultValue
+		const img = user?.photoURL
         const obj ={
-            photo,service,description,price,address
+			service_price: price, service_provider_name: name, service_name:service , service_description: description, service_area: address, service_image:photo, service_provider_image: img
         }  
-        console.log(obj);      
+        console.log(obj);  
+		axios.post('http://localhost:5000/service', obj) 
+		.then(res =>{
+			console.log(res.data);
+		})   
 
     }
     return (
@@ -38,7 +46,7 @@ const AddService = () => {
 				</div>
 				<div className=" ">
 					<label  className="text-sm">Your Name</label>
-					<input  type="text"  defaultValue={user?.displayName
+					<input  type="text" name="name" defaultValue={user?.displayName
 } className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
 				</div>
 				<div className=" ">

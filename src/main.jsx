@@ -15,6 +15,7 @@ import AuthProvider from './Provider/AuthProvider';
 import AllService from './Pages/AllService';
 import SingleService from './Components/SingleService';
 import AddService from './Pages/AddService';
+import MyService from './Pages/MyService';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path : '/addservice',
         element: <AddService></AddService>
+      },
+      {
+        path: '/myservice',
+        element:<MyService></MyService>
       }
     ]
   },

@@ -14,7 +14,6 @@ const AllService = () => {
 
     return (
         <div>
-            <h2>All services :{allService.length} </h2>
             <div className="grid grid-cols-1 mx-10 gap-10">
                 {
                     allService.map(allserve => <AllServe key={allserve._id} allserve={allserve} ></AllServe> )
