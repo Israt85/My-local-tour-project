@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import MyServe from "../Components/MyServe";
 
 
 const MyService = () => {
@@ -17,8 +18,12 @@ const MyService = () => {
     },[url])
     return (
         <div>
-            <h2>My Service :{myService.length} </h2>
-            
+            <h2 className="text-center text-indigo-600 font-semibold text-xl mt-4">My Total Service :{myService.length} </h2>
+            <div>
+                {
+                    myService?.map(myServe=><MyServe key={myServe._id} myServe={myServe}></MyServe>)
+                }
+            </div>
         </div>
     );
 };
