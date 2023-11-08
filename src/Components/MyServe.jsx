@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
+import { LuMapPin} from "react-icons/lu";
+import {BiSolidBadgeDollar  } from "react-icons/bi";
 
 const MyServe = ({ myServe }) => {
     const { service_price, _id, service_provider_name, service_name, service_description, service_area, service_image, service_provider_image } = myServe
@@ -48,7 +50,19 @@ const MyServe = ({ myServe }) => {
                         <h1 className="text-5xl font-bold leadi sm:text-6xl">{service_name}
                         </h1>
                         <p className="mt-6 mb-8 text-lg sm:mb-12">{service_description}
+                        </p> <div className="flex items-center gap-2">
+                        <p className=" text-xl flex items-center font-extrabold text-blue-600">
+                    <LuMapPin></LuMapPin>
+                    <p>{service_area}</p>
+            </p>
+
+            <p  className="flex text-xl items-center p-1 space-x-1.5">
+                            <BiSolidBadgeDollar></BiSolidBadgeDollar>
+                            <p>{service_price}</p>
                         </p>
+                        </div>
+
+                        
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
                             <Link to={`/update/${_id}`}> <button rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded bg-violet-400 text-gray-900">Update</button></Link>
                             <button onClick={() => handleDelete(_id)} className="px-8 py-3 text-lg font-semibold border rounded border-indigo-400" >Delete</button>

@@ -2,10 +2,13 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
 import { Helmet } from "react-helmet";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddService = () => {
 
      const {user} = useContext(AuthContext)
+	 const notify = () => toast("Successfully added the service!!");
 
     const handleAddService = e =>{
         e.preventDefault();
@@ -75,7 +78,8 @@ const AddService = () => {
 				
 			</div>
             <div className="flex flex-col">
-                <button className="btn bg-gradient-to-r from-sky-500 to-indigo-500">Add Service</button>
+                <button onClick={notify} className="btn bg-gradient-to-r from-sky-500 to-indigo-500">Add Service</button>
+				<ToastContainer />
             </div>
 		</fieldset>
 	</form>

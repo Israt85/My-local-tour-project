@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import register from '../assets/regist.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import { Helmet } from 'react-helmet';
 
 const Register = () => {
      const {userSignup, userProfile} = useContext(AuthContext)
+     const location = useLocation()
+     const navigate = useNavigate()
 
       const handleRegister = (e)=>{
         e.preventDefault()
@@ -21,6 +23,7 @@ const Register = () => {
         userSignup(email,password)
         .then(result =>{
             console.log(result.user);
+            navigate(location?.state ? location.state : "/")
             userProfile(name, photo)
             .then(result =>{
                 console.log(result.user);

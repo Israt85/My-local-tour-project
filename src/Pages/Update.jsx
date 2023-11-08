@@ -2,12 +2,15 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Update = () => {
     const updateLoadedData = useLoaderData()
     console.log(updateLoadedData);
     const {user} = useContext(AuthContext)
+
 
     const handleUpdate = e =>{
         e.preventDefault();
@@ -29,7 +32,7 @@ const Update = () => {
     .then(res => {
         console.log(res.data);
         if (res.data.modifiedCount > 0) {
-            alert('Updated successfully');
+            toast('Updated successfully');
             return
         }
     })
@@ -79,6 +82,7 @@ const Update = () => {
 			</div>
             <div className="flex flex-col">
                 <button className="btn bg-gradient-to-r from-sky-500 to-indigo-500">Update</button>
+                <ToastContainer/>
             </div>
 		</fieldset>
 	</form>
