@@ -24,11 +24,13 @@ const AuthProvider = ({children}) => {
 
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, currentUser =>{
+          const userEmail = currentUser?.email || user.email
+
           console.log(currentUser);
           setUser(currentUser)
           setLoading(false)
           if(currentUser){
-            const loggedUser = {email : currentUser.email}
+            const loggedUser = {email : userEmail}
             axios.post('http://localhost:5000/jwt',loggedUser, {withCredentials : true})
             .then(res=>{
                 console.log('token res',res.data);
