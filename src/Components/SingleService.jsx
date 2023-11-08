@@ -2,12 +2,18 @@ import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const SingleService = () => {
     const loadedData = useLoaderData()
     const {user} = useContext(AuthContext)
     const { service_price, _id, service_provider_name, service_name, service_description, service_area, service_image, service_provider_image } = loadedData
+
+     const notify =() =>{
+        toast('you purchase this service successfully')
+     }
 
     const handlePurchase = (e) => {
         e.preventDefault();
@@ -18,7 +24,7 @@ const SingleService = () => {
         const service = form.service?.value || loadedData.service_name;
         const description = form.description?.value || loadedData.service_description;
         const price = form.price?.value || loadedData.service_price;
-        const address = form.address?.value;
+        const address = form.address?.value || loadedData.service_area
         const name = form.name?.value || ''; // Ensure to provide a default value for name
         const email = form.email?.value || user?.email || ''; // Provide a default value for email
         const img = user?.photoURL;
@@ -109,7 +115,8 @@ const SingleService = () => {
 		</div>
 		<div className="space-y-2">
 			<div>
-				<button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-violet-400 text-gray-900">Purchase</button>
+				<button onClick={notify} type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-violet-400 text-gray-900">Purchase</button>
+                <ToastContainer/>
 			</div>
 		</div>
 	</form>
