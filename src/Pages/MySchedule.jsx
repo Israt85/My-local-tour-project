@@ -9,7 +9,9 @@ const MySchedule = () => {
 
     const [myBookings, setMyBookings] = useState([])
     useEffect(()=>{
-         axios.get(`http://localhost:5000/booking?email=${user?.email}`)
+         axios.get(`http://localhost:5000/booking?email=${user?.email}`,{
+            withCredentials: true
+         })
          .then(res=>{
             console.log(res.data);
             setMyBookings(res.data)
