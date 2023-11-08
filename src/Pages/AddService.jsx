@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 const AddService = () => {
 
@@ -29,6 +30,12 @@ const AddService = () => {
     }
     return (
         <div>
+
+<Helmet>
+                <meta charSet="utf-8" />
+                <title>Add Service</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <section className="p-6 bg-gray-800  text-gray-50">
                
 	<form onSubmit={handleAddService} className=" my-10 mx-auto">

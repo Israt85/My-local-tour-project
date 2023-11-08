@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Banner from "../Components/Banner";
 import Blogs from "../Components/Blogs";
 import Destination from "../Components/Destination";
@@ -7,6 +8,11 @@ import Services from "./Services";
 const Home = () => {
     return (
         <div className="bg-[#C2D9FF] ">
+             <Helmet>
+                <meta charSet="utf-8" />
+                <title>Home Page</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <Banner></Banner>
            <Services></Services>
            <Destination></Destination>

@@ -26,10 +26,12 @@ const Navbar = () => {
             <summary className=" btn">Dashboard</summary>
             <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                 {
-                    user?.email && <li><Link to='/myservice'>My Service</Link></li>
+                    user?.email && <>
+                        <li><Link to='/myservice'>My Service</Link></li>
+                        <li><Link to="/addservice">Add-Service</Link></li>
+                        <li><Link to='/myschedule'> My-schedules</Link></li></>
                 }
-                <li><Link to="/addservice">Add-Service</Link></li>
-                <li><Link to='/myschedule'> My-schedules</Link></li>
+
             </ul>
         </details>
 

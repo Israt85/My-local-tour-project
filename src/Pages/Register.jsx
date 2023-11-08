@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import register from '../assets/regist.jpg'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
      const {userSignup, userProfile} = useContext(AuthContext)
@@ -38,6 +39,12 @@ const Register = () => {
 
     return (
         <div>
+
+<Helmet>
+                <meta charSet="utf-8" />
+                <title>Registration Page</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
            <div className="flex items-center justify-center gap-10 w-full h-screen mt-6">
             <div className="flex mt-10 flex-col max-w-md p-6 rounded-md sm:p-10 bg-gradient-to-r from-indigo-500 to bg-[#A0BFE0] text-gray-100">
 	<div className="mb-8 text-center">

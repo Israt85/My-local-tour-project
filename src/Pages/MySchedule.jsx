@@ -1,12 +1,15 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Booking from "../Components/Booking";
+import { Helmet } from "react-helmet";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const MySchedule = () => {
+    const {user} = useContext(AuthContext)
 
     const [myBookings, setMyBookings] = useState([])
     useEffect(()=>{
-         axios.get('http://localhost:5000/booking')
+         axios.get(`http://localhost:5000/booking?email=${user?.email}`)
          .then(res=>{
             console.log(res.data);
             setMyBookings(res.data)
@@ -14,8 +17,13 @@ const MySchedule = () => {
     },[])
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>My Schedule</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <h2>my schedule :{myBookings.length} </h2>
-            <div className="grid grid-cols-2 gap-6 mx-4">
+            <div className=" w-[max-content] mx-auto my-10">
             {
                 myBookings.map(booking => <Booking key={booking._id} booking={booking} ></Booking> )
             }
