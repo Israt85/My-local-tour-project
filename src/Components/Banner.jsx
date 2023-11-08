@@ -1,7 +1,11 @@
 import banner from '../assets/elizeu-dias-SEq9dyZSe6c-unsplash.jpg'
+import { motion } from 'framer-motion';
+
 const Banner = () => {
     return (
-        <div className="hero h-screen bg-cover bg-no-repeat" style={{backgroundImage: `url(${banner})`}}>
+        <div>
+          <motion.div initial={{ y: -50 }} animate={{ y: 50 }}>
+          <div className="hero h-screen bg-cover bg-no-repeat" style={{backgroundImage: `url(${banner})`}}>
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className=" text-[#4A55A2] pt-20 w-2/3">
@@ -11,6 +15,9 @@ const Banner = () => {
           </div>
         </div>
       </div>
+</motion.div>
+
+        </div>
     );
 };
 
