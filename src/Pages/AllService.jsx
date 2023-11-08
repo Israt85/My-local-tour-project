@@ -17,7 +17,7 @@ const AllService = () => {
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>All Services</title>
+                <title>All Services Page</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <div className="grid grid-cols-1 mx-10 gap-10">

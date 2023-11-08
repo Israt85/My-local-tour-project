@@ -45,7 +45,7 @@ const SingleService = () => {
 
     return (
         <div>
-            <section className=" bg-sky-300 text-gray-100">
+            <section className=" bg-sky-300 text-indigo-600">
                 <div className="container flex flex-col items-center justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                     <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
                         <div>
@@ -70,7 +70,7 @@ const SingleService = () => {
                         <p>Price : ${service_price}</p>
                         <div className="mt-4">
                             {/* Open the modal using document.getElementById('ID').showModal() method */}
-                            <button className="btn" onClick={() => document.getElementById('my_modal_1').showModal()}>Book Now</button>
+                            <button className="btn bg-indigo-700" onClick={() => document.getElementById('my_modal_1').showModal()}>Book Now</button>
                             <dialog id="my_modal_1" className="modal">
                                 <div className="modal-box">
                                 <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-900 text-gray-100">
