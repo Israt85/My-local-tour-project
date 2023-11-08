@@ -7,7 +7,7 @@ const MyService = () => {
 
     const {user} = useContext(AuthContext)
     const [myService, setMyService] = useState([])
-    const url = `http://localhost:5000/service?email=${user?.email}`;
+    const url = `https://my-local-tour-project-server.vercel.app/service?email=${user?.email}`;
     useEffect(()=>{
         fetch(url)
         .then(res=>res.json())

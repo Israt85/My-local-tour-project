@@ -36,7 +36,7 @@ const SingleService = () => {
             date,
         };
     
-        axios.post('http://localhost:5000/booking', obj)
+        axios.post('https://my-local-tour-project-server.vercel.app/booking', obj)
             .then((res) => {
                 console.log(res.data);
             });
@@ -79,11 +79,11 @@ const SingleService = () => {
 		<div className="space-y-4">
 			<div>
 				
-				<input type="text" name="service" defaultValue={service_name}  className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
+				<input type="text" name="service" defaultValue={service_name} disabled  className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
 			</div>
 			<div>
 				
-				<input type="url" name="photo" defaultValue={service_image} className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
+				<input type="url" name="photo" defaultValue={service_image} disabled className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
 			</div>
 			<div>
 				
@@ -95,7 +95,7 @@ const SingleService = () => {
 			</div>
 			<div>
 				
-				<input type="text" name="address" id="address" defaultValue={service_name} className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
+				<input type="text" name="address" id="address" defaultValue={service_area} className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
 			</div>
 			<div>
 				

@@ -3,6 +3,7 @@ import tourist from '../assets/sam-knight-N981UfUhF7U-unsplash.jpg'
 const Testimonials = () => {
     return (
         <div>
+			<div>
             <div className=' flex mx-20 flex-row gap-4 justify-center'>
             <div>
             <img className='w-40 h-40 rounded-full' src={tourist} alt="" />
@@ -61,6 +62,7 @@ const Testimonials = () => {
 </section>
         
 </div>
+		</div>
     );
 };
 

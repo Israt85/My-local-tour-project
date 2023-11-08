@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 const AllService = () => {
      const [allService, setAllService] = useState([])
      useEffect(()=>{
-        axios.get('http://localhost:5000/service')
+        axios.get('https://my-local-tour-project-server.vercel.app/service')
         .then(res =>{
             console.log(res.data);
             setAllService(res.data)

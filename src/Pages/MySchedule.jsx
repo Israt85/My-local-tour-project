@@ -3,20 +3,25 @@ import { useContext, useEffect, useState } from "react";
 import Booking from "../Components/Booking";
 import { Helmet } from "react-helmet";
 import { AuthContext } from "../Provider/AuthProvider";
+import useAxiosSecure from "../useAxiosSecure";
 
 const MySchedule = () => {
     const {user} = useContext(AuthContext)
 
     const [myBookings, setMyBookings] = useState([])
+    const axiosSecure = useAxiosSecure()
+    const url = `/booking?email=${user?.email}`
     useEffect(()=>{
-         axios.get(`http://localhost:5000/booking?email=${user?.email}`,{
-            withCredentials: true
-         })
-         .then(res=>{
-            console.log(res.data);
-            setMyBookings(res.data)
-         })
-    },[])
+        //  axios.get(`https://my-local-tour-project-server.vercel.app/booking?email=${user?.email}`,{
+        //     withCredentials: true
+        //  })
+        //  .then(res=>{
+        //     console.log(res.data);
+        //     setMyBookings(res.data)
+        //  })
+        axiosSecure.get(url)
+        .then(res => setMyBookings(res.data))
+    },[axiosSecure, url])
     return (
         <div>
             <Helmet>
