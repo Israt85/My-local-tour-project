@@ -5,40 +5,41 @@ import swal from "sweetalert";
 
 const MyServe = ({ myServe }) => {
     const { service_price, _id, service_provider_name, service_name, service_description, service_area, service_image, service_provider_image } = myServe
-const [myNewServe,setMyNewServe] = useState([myServe])
+    const [myNewServe, setMyNewServe] = useState([myServe])
 
 
-const handleDelete = id => {
-    swal({
-      title: "Are you sure?",
-      text: "Are you sure that you want to delete this file?",
-      icon: "warning",
-      buttons: true,
-      dangerMode: true,
-    }).then((willDelete) => {
-      if (willDelete) {
-        fetch(`http://localhost:5000/service/${id}`,{
-            method: 'DELETE'
+    const handleDelete = _id => {
+        swal({
+            title: "Are you sure?",
+            text: "Are you sure that you want to delete this file?",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
         })
-          .then(res => res.json() )
-          .then(data =>{
-            console.log(data);
-            if (data.deletedCount > 0) {
-                swal("Deleted!", "Your imaginary file has been deleted!", "success");
-                console.log("Before filter - myNewServe:", myNewServe);
-                const remaining = myNewServe?.filter(serve => serve._id !== id);
-                console.log("After filter - remaining:", remaining);
-                setMyNewServe(remaining)
-                
-              }
-          })
-            
-         
-      }
-    });
-  };
-  
-  
+            .then((willDelete) => {
+                if (willDelete) {
+                    fetch(`http://localhost:5000/service/${_id}`, {
+                        method: 'DELETE'
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+                            if (data.deletedCount > 0) {
+                                swal("Deleted!", "Your imaginary file has been deleted!", "success");
+                                console.log("Before filter - myNewServe:", myNewServe);
+                                const remaining = myNewServe?.filter(serve => serve._id !== _id);
+                                setMyNewServe(remaining)
+                                console.log(remaining);
+                            }
+                        })
+
+
+                }
+            });
+       
+    };
+
+
     return (
         <div>
             <section className=" ">
@@ -49,8 +50,8 @@ const handleDelete = id => {
                         <p className="mt-6 mb-8 text-lg sm:mb-12">{service_description}
                         </p>
                         <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                           <Link to={`/update/${_id}`}> <button rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded bg-violet-400 text-gray-900">Update</button></Link>
-                            <button onClick={()=>handleDelete(_id)} className="px-8 py-3 text-lg font-semibold border rounded border-indigo-400" >Delete</button>
+                            <Link to={`/update/${_id}`}> <button rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded bg-violet-400 text-gray-900">Update</button></Link>
+                            <button onClick={() => handleDelete(_id)} className="px-8 py-3 text-lg font-semibold border rounded border-indigo-400" >Delete</button>
                         </div>
                     </div>
                     <div className="flex items-center w-96 justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">

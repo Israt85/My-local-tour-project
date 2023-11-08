@@ -1,6 +1,7 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import axios from "axios";
 
 
 const Update = () => {
@@ -22,7 +23,17 @@ const Update = () => {
         const obj ={
 			service_price: price, service_provider_name: name, service_name:service , service_description: description, service_area: address, service_image:photo, service_provider_image: img,email
         }  
+         
         console.log(obj);  
+        axios.put(`http://localhost:5000/service/${updateLoadedData._id}`, obj)
+    .then(res => {
+        console.log(res.data);
+        if (res.data.modifiedCount > 0) {
+            alert('Updated successfully');
+            return
+        }
+    })
+
   
     }
     return (

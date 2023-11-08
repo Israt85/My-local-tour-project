@@ -1,9 +1,48 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import axios from "axios";
 
 
 const SingleService = () => {
     const loadedData = useLoaderData()
+    const {user} = useContext(AuthContext)
     const { service_price, _id, service_provider_name, service_name, service_description, service_area, service_image, service_provider_image } = loadedData
+
+    const handlePurchase = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        
+        // Safely access form elements and their values
+        const photo = form.photo?.value || loadedData.service_image;
+        const service = form.service?.value || loadedData.service_name;
+        const description = form.description?.value || loadedData.service_description;
+        const price = form.price?.value || loadedData.service_price;
+        const address = form.address?.value;
+        const name = form.name?.value || ''; // Ensure to provide a default value for name
+        const email = form.email?.value || user?.email || ''; // Provide a default value for email
+        const img = user?.photoURL;
+        const date = form.date?.value;
+    
+        const obj = {
+            service_price: price,
+            service_provider_name: name,
+            service_name: service,
+            service_description: description,
+            service_area: address,
+            service_image: photo,
+            service_provider_image: img,
+            email,
+            date,
+        };
+    
+        axios.post('http://localhost:5000/booking', obj)
+            .then((res) => {
+                console.log(res.data);
+            });
+    };
+    
+
     return (
         <div>
             <section className=" bg-sky-300 text-gray-100">
@@ -36,41 +75,41 @@ const SingleService = () => {
                                 <div className="modal-box">
                                 <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-900 text-gray-100">
 
-	<form  action="" className="space-y-12">
+	<form  onSubmit={handlePurchase} className="space-y-12">
 		<div className="space-y-4">
 			<div>
 				
-				<input type="email" name="email" id="email" defaultValue={service_name} disabled className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
+				<input type="text" name="service" defaultValue={service_name}  className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
 			</div>
 			<div>
 				
-				<input type="email" name="email" id="email" defaultValue={service_name} disabled className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
+				<input type="url" name="photo" defaultValue={service_image} className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
 			</div>
 			<div>
 				
-				<input type="email" name="email" id="email" defaultValue={service_name} disabled className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
+				<input type="email" name="email" id="email" defaultValue={user?.email} disabled className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
 			</div>
 			<div>
 				
-				<input type="email" name="email" id="email" defaultValue={service_name} disabled className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
+				<input type="date" name="date" id="date"className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
 			</div>
 			<div>
 				
-				<input type="email" name="email" id="email" defaultValue={service_name} disabled className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
+				<input type="text" name="address" id="address" defaultValue={service_name} className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
 			</div>
 			<div>
 				
-				<input type="email" name="email" id="email" defaultValue={service_name} disabled className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
+				<input type="text" name="price" id="email" defaultValue={service_price}disabled className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
 			</div>
-			<div>
+			{/* <div>
 				
 				<input type="email" name="email" id="email" defaultValue={service_name} disabled className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
-			</div>
+			</div> */}
 			
 		</div>
 		<div className="space-y-2">
 			<div>
-				<button type="button" className="w-full px-8 py-3 font-semibold rounded-md bg-violet-400 text-gray-900">Purchase</button>
+				<button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-violet-400 text-gray-900">Purchase</button>
 			</div>
 		</div>
 	</form>

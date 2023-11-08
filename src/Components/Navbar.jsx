@@ -29,7 +29,7 @@ const Navbar = () => {
                     user?.email && <li><Link to='/myservice'>My Service</Link></li>
                 }
                 <li><Link to="/addservice">Add-Service</Link></li>
-                <li><Link> My-schedules</Link></li>
+                <li><Link to='/myschedule'> My-schedules</Link></li>
             </ul>
         </details>
 

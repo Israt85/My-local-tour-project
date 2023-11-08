@@ -46,12 +46,12 @@ const AddService = () => {
 				</div>
 				<div className=" ">
 					<label  className="text-sm">Your Name</label>
-					<input  type="text" name="name" defaultValue={user?.displayName
+					<input  type="text" disabled name="name" defaultValue={user?.displayName
 } className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
 				</div>
 				<div className=" ">
 					<label  className="text-sm">Your Email</label>
-					<input id="email" type="email" defaultValue={user?.email}className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
+					<input id="email" type="email" disabled defaultValue={user?.email}className="w-full p-2 rounded-md focus:ring focus:ri focus:ri border-gray-700 text-gray-900" />
 				</div>
 				<div className="">
 					<label className="text-sm">Address</label>
