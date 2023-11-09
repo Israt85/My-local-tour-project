@@ -11,9 +11,7 @@ const SingleService = () => {
     const {user} = useContext(AuthContext)
     const { service_price, _id, service_provider_name, service_name, service_description, service_area, service_image, service_provider_image } = loadedData
 
-     const notify =() =>{
-        toast('you purchase this service successfully')
-     }
+     
 
     const handlePurchase = (e) => {
         e.preventDefault();
@@ -42,9 +40,10 @@ const SingleService = () => {
             date,
         };
     
-        axios.post('https://my-local-tour-project-server.vercel.app/booking', obj)
+        axios.post('http://localhost:5000/booking', obj)
             .then((res) => {
                 console.log(res.data);
+                toast('purchase successfully')
             });
     };
     
@@ -115,7 +114,7 @@ const SingleService = () => {
 		</div>
 		<div className="space-y-2">
 			<div>
-				<button onClick={notify} type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-violet-400 text-gray-900">Purchase</button>
+				<button className="w-full btn px-8 py-3 font-semibold rounded-md bg-violet-400 text-gray-900">Purchase</button>
                 <ToastContainer/>
 			</div>
 		</div>

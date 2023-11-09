@@ -31,7 +31,7 @@ const Testimonials = () => {
 					</svg>
 				</p>
 			</div>
-			<div className="flex flex-col items-center justify-center p-8 rounded-b-lg bg-violet-400 text-gray-900">
+			<div className="flex flex-col items-center justify-center p-8 rounded-b-lg bg-indigo-500 text-gray-900">
 				<img src="https://source.unsplash.com/50x50/?portrait?1" alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500 bg-gray-700" />
 				<p className="text-xl font-semibold leadi">East London</p>
 				<p className="text-sm uppercase">Benjamin Martinez</p>
@@ -50,7 +50,7 @@ const Testimonials = () => {
 					</svg>
 				</p>
 			</div>
-			<div className="flex flex-col items-center justify-center p-8 rounded-b-lg bg-violet-400 text-gray-900">
+			<div className="flex flex-col items-center justify-center p-8 rounded-b-lg bg-indigo-500 text-gray-900">
 				<img src="https://source.unsplash.com/50x50/?portrait?2" alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500 bg-gray-700" />
 				<p className="text-xl font-semibold leadi">London</p>
 				<p className="text-sm uppercase">Emily Turner</p>

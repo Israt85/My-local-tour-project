@@ -5,7 +5,8 @@ const Booking = ({booking}) => {
     const { service_price, _id, service_provider_name, service_name, service_description, service_area, service_image, service_provider_image } = booking
     return (
         <div>
-            <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md bg-gray-900 text-gray-100">
+            
+            <div className="flex flex-col my-4 max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md bg-gray-900 text-gray-100">
                 <div className="flex space-x-4">
                     <img alt="" src={service_provider_image} className="object-cover w-12 h-12 rounded-full shadow bg-gray-500" />
                     <div className="flex items-center">
