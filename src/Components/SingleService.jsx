@@ -40,7 +40,7 @@ const SingleService = () => {
             date,
         };
     
-        axios.post('http://localhost:5000/booking', obj)
+        axios.post('https://my-local-tour-project-server.vercel.app/booking', obj)
             .then((res) => {
                 console.log(res.data);
                 toast('purchase successfully')

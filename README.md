@@ -5,4 +5,4 @@ About my project
 * after read the details you cann book the services.
 * and All this booking services you can see dashboards's my schedules page.Moreover, it's also jwt secure. you can see your services only you.Also have many more features....
 
-* my client side live link : 
+my client side live link : https://local-tour-a52be.web.app/
