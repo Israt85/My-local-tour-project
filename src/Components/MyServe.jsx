@@ -20,7 +20,7 @@ const MyServe = ({ myServe }) => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`https://my-local-tour-project-server.vercel.app/service/${_id}`, {
+                    fetch(`http://localhost:5000/service/${_id}`, {
                         method: 'DELETE'
                     })
                         .then(res => res.json())

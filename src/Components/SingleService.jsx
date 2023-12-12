@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
@@ -40,7 +40,7 @@ const SingleService = () => {
             date,
         };
     
-        axios.post('https://my-local-tour-project-server.vercel.app/booking', obj)
+        axios.post('http://localhost:5000/booking', obj)
             .then((res) => {
                 console.log(res.data);
                 toast('purchase successfully')
@@ -76,6 +76,7 @@ const SingleService = () => {
                         <div className="mt-4">
                             {/* Open the modal using document.getElementById('ID').showModal() method */}
                             <button className="btn bg-indigo-700" onClick={() => document.getElementById('my_modal_1').showModal()}>Book Now</button>
+                           <Link to='/feedback'> <button className="btn btn-outline btn-primary">feedback</button></Link>
                             <dialog id="my_modal_1" className="modal">
                                 <div className="modal-box">
                                 <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-900 text-gray-100">
@@ -106,10 +107,6 @@ const SingleService = () => {
 				
 				<input type="text" name="price" id="email" defaultValue={service_price}disabled className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
 			</div>
-			{/* <div>
-				
-				<input type="email" name="email" id="email" defaultValue={service_name} disabled className="w-full px-3 py-2 border rounded-md border-gray-700 bg-gray-900 text-gray-100" />
-			</div> */}
 			
 		</div>
 		<div className="space-y-2">

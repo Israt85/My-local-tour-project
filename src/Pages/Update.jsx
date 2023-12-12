@@ -28,7 +28,7 @@ const Update = () => {
         }  
          
         console.log(obj);  
-        axios.put(`https://my-local-tour-project-server.vercel.app/service/${updateLoadedData._id}`, obj)
+        axios.put(`http://localhost:5000/service/${updateLoadedData._id}`, obj)
     .then(res => {
         console.log(res.data);
         if (res.data.modifiedCount > 0) {

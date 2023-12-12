@@ -12,7 +12,7 @@ const MySchedule = () => {
     // const axiosSecure = useAxiosSecure()
     // const url = `/booking?email=${user?.email}`
     useEffect(()=>{
-         axios.get(`https://my-local-tour-project-server.vercel.app/booking?email=${user?.email}`,{
+         axios.get(`http://localhost:5000/booking?email=${user?.email}`,{
             withCredentials: true
          })
          .then(res=>{
