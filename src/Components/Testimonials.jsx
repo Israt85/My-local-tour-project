@@ -13,7 +13,7 @@ const Testimonials = () => {
 	
 	const [feedback,setFeedback]= useState([])
 	useEffect(()=>{
-		axios.get('http://localhost:5000/feedback')
+		axios.get('https://my-local-tour-project-server.vercel.app/feedback')
 		.then(res=>{
 			console.log(res.data)
 			setFeedback(res.data)
@@ -53,7 +53,7 @@ const Testimonials = () => {
 		{
 			feedback?.map(feed =><SwiperSlide key={feed._id}><div  className="flex flex-col w-full mx-4 my-6 shadow-lg">
 			<div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900">
-				<p className="relative px-6 py-1 text-lg italic text-center text-gray-100">
+				<p className="relative h-96 px-6 py-1 text-lg italic text-center text-gray-100">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 text-violet-400">
 						<path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
 						<path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>

@@ -39,7 +39,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div>
+        <div className=''>
             <header className="p-4 bg-[#A0BFE0] dark:bg-gray-800 dark:text-gray-100">
 
             

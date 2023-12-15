@@ -43,12 +43,12 @@ const router = createBrowserRouter([
       },
       {
         path:'/feedback',
-        element: <FeedBackForm></FeedBackForm>
+        element: <Private><FeedBackForm></FeedBackForm></Private>
       },
       {
         path: '/details/:id',
         element: <Private><SingleService></SingleService></Private>,
-        loader: ({params}) =>{return fetch(`http://localhost:5000/service/${params.id}`)}
+        loader: ({params}) =>{return fetch(`https://my-local-tour-project-server.vercel.app/service/${params.id}`)}
       },
       {
         path: "/dashboard",
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
       {
         path: '/update/:id',
         element: <Update></Update>,
-        loader:({params})=>fetch(`http://localhost:5000/service/${params.id}`)
+        loader:({params})=>fetch(`https://my-local-tour-project-server.vercel.app/service/${params.id}`)
       },
       {
         path: '/myschedule',

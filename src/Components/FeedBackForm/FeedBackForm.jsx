@@ -15,7 +15,7 @@ const FeedBackForm = () => {
        const obj = {name,location,feedback,photo}
        console.log(obj);
 
-       axios.post('http://localhost:5000/feedback',obj)
+       axios.post('https://my-local-tour-project-server.vercel.app/feedback',obj)
        .then(res=>{
         console.log(res.data);
        })

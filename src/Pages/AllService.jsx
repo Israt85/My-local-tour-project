@@ -9,7 +9,7 @@ const AllService = () => {
     const [allService, setAllService] = useState([])
     const [isMore, setIsMore] = useState(false)
     useEffect(() => {
-        axios.get('http://localhost:5000/service')
+        axios.get('https://my-local-tour-project-server.vercel.app/service')
             .then(res => {
                 console.log('from client',res.data);
                 setAllService(res.data)
