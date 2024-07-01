@@ -14,6 +14,9 @@ const AllService = () => {
                 console.log('from client',res.data);
                 setAllService(res.data)
             })
+            .catch(err=>{
+                console.log(err);
+            })
     }, [])
 
     return (

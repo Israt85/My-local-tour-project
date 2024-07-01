@@ -3,7 +3,7 @@ import logo from '../assets/G logo.jpg'
 const Footer = () => {
     return (
         <div>
-            <footer className="px-4 my-6 divide-y bg-[#A0BFE0] text-gray-100">
+            <footer className="px-4 my-6 divide-y bg-[#8a9fb6] text-gray-100">
                 <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                     <div className="lg:w-1/3">
                     <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" className="flex items-center p-2">
@@ -77,7 +77,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="py-6 text-sm text-center text-gray-600">© 1968 Company Co. All rights reserved.</div>
+                <div className="py-6 text-sm text-center text-gray-600">© 2024 Company GuidedGems. All rights reserved.</div>
             </footer>
         </div>
     );

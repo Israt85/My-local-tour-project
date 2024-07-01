@@ -4,7 +4,7 @@ const Service = ({service}) => {
     const {service_price, service_provider_name, service_name , service_description, service_image, service_provider_image} = service
     return (
         <div>
-            <div className=" p-6 h-full rounded-md shadow-md bg-[#8E8FFA] text-gray-50">
+            <div className=" p-6 h-full rounded-md shadow-md bg-gray-200">
                 <img src={service_image} alt="" className="object-cover object-center w-full rounded-md h-72 bg-gray-500" />
                 <span className="block mt-4 text-xs font-medium tracki uppercase text-[#190482]">{service_name}</span>
                 <div className="flex items-center gap-2 mt-6 mb-2">
@@ -19,7 +19,7 @@ const Service = ({service}) => {
                 price : ${service_price}
             </p>
             <div className="mt-2">
-            <button className="btn bg-indigo-500">View Details</button>
+            <button className="btn btn-outline border-indigo-400">View Details</button>
             </div>
             </div>
             

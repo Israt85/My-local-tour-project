@@ -13,7 +13,7 @@ const AllServe = ({ allserve }) => {
                 animate={{ opacity: 10, x: 0 }}
                 transition={{ duration: 2 }}
             >
-                <div className=" border p-6 rounded-md shadow-md bg-[#8E8FFA] text-gray-50">
+                <div className=" border p-6 rounded-md shadow-md bg-gray-200">
                     <img src={service_image} alt="" className="object-cover object-center w-full rounded-md h-72 bg-gray-500" />
                     <div className="flex justify-between items-center"> <span className="block mt-4 text-xs font-medium tracki uppercase text-[#190482]">{service_name}</span>
                         <p className=" text-xl flex items-center font-extrabold text-blue-600">
@@ -35,7 +35,7 @@ const AllServe = ({ allserve }) => {
                     </p>
 
                     <div className="mt-2">
-                        <Link to={`/details/${_id}`} ><button className="btn bg-indigo-500">View Details</button></Link>
+                        <Link to={`/details/${_id}`} ><button className="btn btn-outline border-indigo-500">View Details</button></Link>
                     </div>
                 </div>
 

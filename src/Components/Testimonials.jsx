@@ -33,7 +33,7 @@ const Testimonials = () => {
         </div>
         <section className="my-2 text-gray-100">
 	<div className="container flex flex-col items-center mx-auto md:px-12">
-		<h1 className="p-4 text-4xl font-semibold leadi shadow text-[#00A9FF] text-center">What our customers are saying about us</h1>
+		<h1 className="p-4 text-4xl font-semibold leadi shadow text-[#190482] text-center">What our customers are saying about us</h1>
 	</div>
 	<div className="container mx-auto">
 
@@ -52,8 +52,8 @@ const Testimonials = () => {
 
 		{
 			feedback?.map(feed =><SwiperSlide key={feed._id}><div  className="flex flex-col w-full mx-4 my-6 shadow-lg">
-			<div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900">
-				<p className="relative h-96 px-6 py-1 text-lg italic text-center text-gray-100">
+			<div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-200">
+				<p className="relative h-96 px-6 py-1 text-lg italic text-center text-gray-900">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 text-violet-400">
 						<path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
 						<path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
@@ -64,7 +64,7 @@ const Testimonials = () => {
 					</svg>
 				</p>
 			</div>
-			<div className="flex flex-col items-center justify-center p-8 rounded-b-lg bg-indigo-500 text-gray-900">
+			<div className="flex flex-col items-center justify-center p-8 rounded-b-lg bg-indigo-300 text-gray-900">
 				<img src={feed?.photo} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500" />
 				<p className="text-xl font-semibold leadi">{feed?.location}</p>
 				<p className="text-sm uppercase">{feed.name}</p>
@@ -73,7 +73,7 @@ const Testimonials = () => {
 		}
 </Swiper>
 		<div className='w-[max-content] mx-auto'>
-		<Link to='/feedback'><button className='btn btn-primary'>Give FeedBack</button></Link>
+		<Link to='/feedback'><button className='btn bg-gradient-to-r from-sky-500 to-indigo-500'>Give FeedBack</button></Link>
 		</div>
 	</div>
 </section>

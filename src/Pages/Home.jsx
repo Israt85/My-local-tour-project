@@ -7,7 +7,7 @@ import Services from "./Services";
 
 const Home = () => {
     return (
-        <div className="bg-[#C2D9FF] ">
+        <div className="bg-white ">
              <Helmet>
                 <meta charSet="utf-8" />
                 <title>Home Page</title>

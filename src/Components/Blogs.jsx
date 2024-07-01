@@ -5,14 +5,14 @@ import img4 from '../assets/dubai.jpg'
 const Blogs = () => {
     return (
         <div>
-            <section className="py-6 sm:py-12 bg-gray-800 text-gray-100">
+            <section className="py-6 sm:py-12">
 	<div className="container p-6 mx-auto space-y-8">
 		<div className="space-y-2 text-center">
 			<h2 className="text-3xl font-bold">Reading a blog is a journey of discovery and a pathway to deeper knowledge. </h2>
 			<p className="font-serif text-sm text-gray-400">When you delve into a well-written blog, you open the door to a world of insights, tips, and expertise. Each article offers a chance to learn more, broaden your horizons, and gain new perspectives on a wide range of subjects.</p>
 		</div>
 		<div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-			<article className="flex flex-col bg-gray-900">
+			<article className="flex flex-col bg-gray-200">
 				<a rel="noopener noreferrer" href="https://www.travelandleisure.com/travel-guide/london#:~:text=London%20is%20a%20beautiful%20city,over%20for%20your%20next%20visit." aria-label="Te nulla oportere reprimique his dolorum">
 					<img alt="" className="object-cover w-full h-52 bg-gray-500" src={img1} />
 				</a>
@@ -26,7 +26,7 @@ const Blogs = () => {
 					</div>
 				</div>
 			</article>
-			<article className="flex flex-col bg-gray-900">
+			<article className="flex flex-col bg-gray-200">
 				<a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
 					<img alt="" className="object-cover w-full h-52 bg-gray-500" src={img3}/>
 				</a>
@@ -40,7 +40,7 @@ const Blogs = () => {
 					</div>
 				</div>
 			</article>
-			<article className="flex flex-col bg-gray-900">
+			<article className="flex flex-col bg-gray-200">
 				<a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
 					<img alt="" className="object-cover w-full h-52 bg-gray-500" src={img4} />
 				</a>
@@ -54,7 +54,7 @@ const Blogs = () => {
 					</div>
 				</div>
 			</article>
-			<article className="flex flex-col bg-gray-900">
+			<article className="flex flex-col bg-gray-200">
 				<a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
 					<img alt="" className="object-cover w-full h-52 bg-gray-500" src={img2} />
 				</a>
